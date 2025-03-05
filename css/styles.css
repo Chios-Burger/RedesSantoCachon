@@ -1,0 +1,93 @@
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+body {
+    background-color: #9a3f2f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 10px;
+}
+
+img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 50%;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Estilos de los botones */
+.btn-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    height: 60px;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    position: relative;
+    overflow: hidden;
+    margin: 10px auto;
+    transition: letter-spacing 0.3s ease-in-out;
+}
+
+/* Efecto de espaciado en hover */
+.btn-2:hover {
+    letter-spacing: 5px;
+}
+
+/* Líneas de borde superior e inferior */
+.btn-2::before, .btn-2::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Línea superior */
+.btn-2::before {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Línea inferior */
+.btn-2::after {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Expande las líneas en hover */
+.btn-2:hover::before, .btn-2:hover::after {
+    width: 70%;
+}
